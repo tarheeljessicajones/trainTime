@@ -21,38 +21,39 @@
 
   	<!-- Moment.js -->
   	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky" rel="stylesheet">
 </head>
 
 
-<body style="background-color: black; text-align: center;">
-	<div class="container">
-		
+<body style="background-color: #323232; text-align: center;">
+	<div class="container-fluid">
 		<div class="jumbotron" style="background-image: url('images/railroad-track.jpg'); background-repeat: no-repeat;background-size: cover; background-position: center;background-attachment: fixed; color: white;">
-			<h1 class="text-center">Where Any Time is Train Time!</h1>
-			<h3 class="text-center">ALL ABOARD!</h3>
+			<h1 class="text-center" style="font-family: 'Fontdiner Swanky', cursive;"><strong>Timed Travel</strong></h1>
 		</div>
-		
+	</div>
+
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel" style="background-color: grey; color: white;">
-					<div class="panel-heading" style="color: black;">
-						<h3 class="panel-title"><strong>CURRENT TRAIN SCHEDULE</strong>
-					<div class="panel-body" style="color: white;">
-						<table class="table table-hover" id="trainTable">
+					<div class="panel-heading" style="color: black; font-family: 'Fontdiner Swanky', cursive;"">
+						<h3 class="panel-title"><strong>CURRENT TRAIN SCHEDULE</strong></h3>
+					</div>
+					<div class="panel-body" style="color: white; opacity: 0.75;" >
+						<table class="table table-hover" id="trainTable" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'">
 							<thead>
-								<tr>
-									<th>Train Name</th>
-									<th>Destination</th>
-									<th>Frequency (in minutes)</th>
-									<th>Next Arrival</th>
-									<th>Minutes Away</th>
+								<tr>								
+									<th style="text-align: center;">Train Name</th>
+									<th style="text-align: center;">Destination</th>
+									<th style="text-align: center;">Frequency (in minutes)</th>
+									<th style="text-align: center;">Next Arrival</th>
+									<th style="text-align: center;">Minutes Away</th>
 								</tr>
 							</thead>
 							<tbody>
 								<!-- LEAVE THIS EMPTY-->
 							</tbody>
 						</table>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -61,8 +62,8 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel" style="background-color: grey; color: white;">
-					<div class="panel-heading" style="color: black;">
-						<h3 class="panel-title"><strong>ADD TRAIN</strong></h3>
+					<div class="panel-heading" style="color: black; font-family: 'Fontdiner Swanky', cursive;">
+						<h3 class="panel-title"><strong>ADD A TRAIN</strong></h3>
 					</div>
 					<div class="panel-body">
 						<form>
@@ -76,7 +77,8 @@
 								<label for="">Frequency (in minutes)</label>
 								<input type="text" class="form-control" id="frequencyInput">
 							</div>
-							<button type="submit" class="btn" style="background-color: black; color: white;" id="addTrainBtn">Submit!</button>
+							<button type="submit" class="btn" style="background-color: black; color: white;" id="addTrainBtn">Submit</button>
+							<button type="clear" class="btn" style="background-color: black; color: white;" id="clearBtn">Clear Form</button>
 						</form>
 					</div>
 				</div>
@@ -89,4 +91,3 @@
 
 
 </html>
-
